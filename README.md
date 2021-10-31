@@ -17,6 +17,7 @@ In order to keep a fair comparison between implementations, here I define some c
 - start with `Lorem ipsum dolor sit amet`
 - appear random
 - be a concatenation of paragraphs, separated by `\n\n`
+- only contain valid words/separators (null bytes in the output would increase throughput, so that's not valid)
 
 **Paragraphs** MUST
 - randomly contain between 3 to 8 sentences
