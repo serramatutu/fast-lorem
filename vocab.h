@@ -1,9 +1,8 @@
 #ifndef VOCAB_H
 #define VOCAB_H
 
-#define LOREM_VOCAB_COMMON { "lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipisicing", "elit" }
-
-#define LOREM_VOCAB_WORDS { \
+#define LOREM_VOCAB { \
+    "lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipisicing", "elit"\
     "exercitationem", "perferendis", "perspiciatis", "laborum", "eveniet", \
     "sunt", "iure", "nam", "nobis", "eum", "cum", "officiis", "excepturi", \
     "odio", "consectetur", "quasi", "aut", "quisquam", "vel", "eligendi", \
@@ -34,5 +33,7 @@
     "eos", "alias", "dolore", "tenetur", "deleniti", "porro", "facere", \
     "maxime", "corrupti" \
 }
+
+#define LOREM_MAX_WORD_LEN 14
 
 #endif

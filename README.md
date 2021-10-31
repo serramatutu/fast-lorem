@@ -2,13 +2,6 @@
 
 Trying to generate Lorem Ipsum at maximum throughput.
 
-## Benchmarking
-
-Benchmarks are run using
-```
-./loremgenerator | pv > /dev/null
-```
-
 ## What is valid Lorem Ipsum?
 
 In order to keep a fair comparison between implementations, here I define some constraints for valid "Lorem Ipsum" text.
@@ -32,3 +25,17 @@ In order to keep a fair comparison between implementations, here I define some c
 
 **Words** MUST
 - be defined in the Lorem Ipsum vocabulary (`vocab.h`)
+
+## Performance benchmarks
+
+Performance is measured using `./loremgenerator | pv > /dev/null` on my computer:
+- **Processor:** Intel® Core™ i7-8565U CPU @ 1.80GHz (8 threads)
+- **Memory:** 16GB
+- **OS:** Ubuntu 20.04.3 LTS
+- **Kernel:** Linux 5.4.0-89-generic x86_64
+
+|Generator | Throughput|
+|----------|-----------|
+|`naive.c` |228 MiB/s  |
+
+**TODO:** Graph throughput over time.
