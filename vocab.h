@@ -36,4 +36,9 @@
 
 #define LOREM_MAX_WORD_LEN 14
 
+#define LOREM_MAX_COMMAS 4
+
+// 8 sentences of 40 words with 4 commas, 1 period and max word size, plus delimiter
+#define LOREM_MAX_PARAGRAPH_SIZE (8 * 40 * (4 + 1) * LOREM_MAX_WORD_LEN + 2)
+
 #endif

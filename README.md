@@ -7,7 +7,6 @@ Trying to generate Lorem Ipsum at maximum throughput.
 In order to keep a fair comparison between implementations, here I define some constraints for valid "Lorem Ipsum" text.
 
 **Lorem Ipsum text** MUST
-- start with `Lorem ipsum dolor sit amet`
 - seem random and non-repetitive
 - be a concatenation of paragraphs, separated by `\n\n`
 - only contain valid words/separators (null bytes in the output would increase throughput, so that's not valid)
@@ -35,8 +34,11 @@ Performance is measured using `./loremgenerator | pv > /dev/null` on my computer
 - **OS:** Ubuntu 20.04.3 LTS
 - **Kernel:** Linux 5.4.0-89-generic x86_64
 
-|Generator | Throughput|
-|----------|-----------|
-|`naive.c` |228 MiB/s  |
+Programs are compiled with GCC 11.2 with level 3 optimization enabled (`-O3`).
+
+|Generator          | Throughput |
+|-------------------|------------|
+|`naive.c`          |236 MiB/s   |
+|`parallel_write.c` |3.74 GiB/s  |
 
 **TODO:** Graph throughput over time.

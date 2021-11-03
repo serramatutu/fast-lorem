@@ -1,6 +1,9 @@
 
+build_debug:
+	gcc-11 -march=native -pthread -g -o bin/$(TARGET)_debug $(TARGET).c
+
 build:
-	gcc -O3 -o bin/$(TARGET) $(TARGET).c
+	gcc-11 -march=native -mtune=native -pthread -O3 -o bin/$(TARGET) $(TARGET).c
 
 run: build
 	./bin/$(TARGET) | pv
